@@ -210,10 +210,7 @@ form button:hover {
  display: flex;
  align-items: center;
  justify-content: center;
- margin: 2rem 0 1rem 0;
- position: fixed;
- bottom: 0;
- right: 0;
+ margin: 2.5rem 0 1rem 0;
 }
 .api-img {
   margin: 0 1rem;
