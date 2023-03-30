@@ -11,13 +11,13 @@ body {
   flex-direction: column;
   justify-content:flex-start;
   align-items: center;
-  background-color: hsl(0, 0%, 73%);
+  background-color: hsl(0, 0%, 80%);
 }
 h1 {
   margin: 1.5rem 0;
   text-align: center;
   font-weight: 700;
-  color: hsl(249, 100%, 62%);
+  color: #5a3dff;
 }
 
 /*---------------------------- FORM ---------------------------  */
