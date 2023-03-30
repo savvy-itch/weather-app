@@ -82,7 +82,7 @@ form button:hover {
   justify-content: space-around;
   align-self: center;
   cursor: pointer;
-  background-color: var(--bg-color);
+  background-color: hsl(0, 0%, 75%);
   border-radius: 6px 6px 0 0;
   padding: .3rem 0;
   position: relative;
