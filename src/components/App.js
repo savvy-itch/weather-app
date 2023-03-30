@@ -107,7 +107,7 @@ function App() {
           </div>
         </div>
       )}
-      <Footer key={'footer'} />
+      <Footer />
     </div>
   );
 }

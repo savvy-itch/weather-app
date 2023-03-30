@@ -12,7 +12,6 @@ body {
   justify-content:flex-start;
   align-items: center;
   background-color: hsl(0, 0%, 73%);
-  min-height: 100vh;
 }
 h1 {
   margin: 1.5rem 0;
@@ -58,7 +57,7 @@ form button:hover {
 .weather-tabs {
   display: flex;
   flex-direction: column;
-  min-width: 600px;
+  /* min-width: 600px; */
 }
 .weather-tab-location-heading {
   margin: 1rem 0;
@@ -264,48 +263,54 @@ form button:hover {
 }
 
 @media screen and (max-width: 680px) {
+  html, body, #root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  } 
+  .App {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start ;
+    align-items: center;
+  } 
+  form > div {
+    align-items: center;
+  }
+  .input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .input-div button {
+    margin: 0;
+  }
+  .weather-tabs {
+    width: 100%;
+    overflow-x: auto;
+    margin-left: 1rem;
+    position: relative;
+  }
+  .forecast-details {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    border-radius: 6px;
+  }
+  .day-tab {
+    position: static;
+  }
+  .thumbnail-container {
+    padding: 1rem;
+  }
   .thumbnail {
     display: none;
   }
-  .thumbnail-container {
-    position: fixed;
-    top: 23%;
-    left: 0;
-    right: 0;
-  }
-  .forecast-details {
-    overflow-x: scroll;
-    white-space: nowrap;
-    top: 16rem;
-    left: 5%;
-    position: relative;
-    padding: .5rem .2rem;
-    border-radius: 6px;
-  }
-  .App {
-    min-height: 80vh;
-  }
-  h1, form, .weather-tab-location-heading {
-    position: fixed;
-  }
-  h1 {
-    top: 2%;
-    left: 0;
-    right: 0;
-  }
-  form {
-    top: 8%;
-    left: 0;
-    right: 0;
-  }
-  .weather-tab-location-heading {
-    top: 18%;
-    left: 0;
-    right: 0;
-  }
   .mobile-thumbnail {
     display: block;
-    padding: .4rem;
+    padding: .6rem;
     cursor: pointer;
     border: none;
     border-radius: 10px;
@@ -324,65 +329,9 @@ form button:hover {
     font-weight: 500;
   }
   .wind-heading {
-    position: fixed;
-    top: 47%;
-    left: 7%;
+    top: 69%;
   }
   .prec-heading {
-    position: fixed;
-    top: 53%;
-    left: 7%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .forecast-details {
-    left: 10%;
-  }
-  .wind-heading, .prec-heading {
-    left: 8%;
-  }
-}
-@media screen and (max-width: 530px) {
-  .forecast-details {
-    left: 15%;
-  }
-}
-@media screen and (max-width: 460px) {
-  html {
-    font-size: 12px;
-  }
-  .forecast-details {
-    top: 22rem;
-    left: 20%;
-  }
-  .wind-heading {
-    top: 45%;
-    left: 12%;
-  }
-  .prec-heading {
-    top: 50%;
-    left: 12%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .forecast-details {
-    left: 25%;
-  }
-  form label {
-    text-align: center;
-  }
-  .input-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .weather-tab-location-heading {
-    top: 19%;
-  }
-  .thumbnail-container {
-    top: 24%;
-  }
-  .wind-heading, .prec-heading {
-    left: 13%;
+    top: 82%;
   }
 }
